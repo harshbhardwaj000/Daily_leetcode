@@ -1,0 +1,8 @@
+from collections import defaultdict ,Counter
+class Solution(object):
+    def groupAnagrams(self, strs):
+        group = defaultdict(list)
+        for word in strs:
+            key = ''.join(sorted(word))
+            group[key].append(word)
+        return list(group.values())
