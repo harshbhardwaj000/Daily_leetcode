@@ -8,5 +8,6 @@ class Solution(object):
         arr.sort()
         for i in range(len(arr)):
             nums1[i]= arr[i]
+        return nums1
 
 
