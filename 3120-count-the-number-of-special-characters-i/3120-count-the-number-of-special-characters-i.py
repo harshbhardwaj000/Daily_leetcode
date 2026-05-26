@@ -9,8 +9,7 @@ class Solution(object):
             elif x.islower():
                 low.add(x)
         for x in low:
-            for y in up:
-                if x == y.lower():
-                    count+=1
+            if x.upper() in up:
+                count+=1
         return count
         
