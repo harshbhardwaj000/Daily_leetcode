@@ -7,12 +7,12 @@ class Solution(object):
                 up +=1
             elif x.islower():
                 low +=1
-        if word[0].isupper() and up < 2:
+        if (word[0].isupper() and up < 2) or (up > 0 and low <= 0) or (up <=0 and low > 0):
             return True
-        elif up > 0 and low <= 0 :
-            return True
-        elif up <=0 and low > 0:
-            return True
+        # elif 
+        #     return True
+        # elif 
+        #     return True
         else:
             return False
 
