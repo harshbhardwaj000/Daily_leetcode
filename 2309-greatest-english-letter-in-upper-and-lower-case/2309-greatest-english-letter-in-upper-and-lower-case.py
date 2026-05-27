@@ -5,7 +5,7 @@ class Solution(object):
         for x in s:
             if x.isupper():
                 upper.add(x)
-            elif x.islower():
+            else:
                 lower.add(x)
         for x in upper.copy():
             if x.lower() not in lower:
