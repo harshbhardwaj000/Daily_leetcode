@@ -4,10 +4,11 @@ class Solution(object):
         l=0
         res=0
         count=defaultdict(int)
-        for r in range(len(s)):
+        n=len(s)
+        for r in range(n):
             count[s[r]]+=1
             while len(count) ==3:
-                res+=(len(s)-r)
+                res+=(n-r)
                 count[s[l]]-=1
                 if count[s[l]]==0:
                     count.pop(s[l])
