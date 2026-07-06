@@ -5,7 +5,7 @@ class Solution(object):
             if num1 < num2:
                 num2 = num2-num1
                 count +=1
-            elif num2 <= num1:
+            else:
                 num1 = num1-num2
                 count +=1
         return count
