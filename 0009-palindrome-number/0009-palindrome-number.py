@@ -11,9 +11,3 @@ class Solution(object):
             rev_num = rev_num * 10 + num
             x //= 10
         return original == rev_num
-
-
-
-        
-        
-   
