@@ -1,15 +1,14 @@
 class Solution(object):
     def pivotIndex(self, nums):
-        total=sum(nums)
-        lsum=0
-
+        l_sum=0
+        r_sum=0
+        total =sum(nums)
         for i in range(len(nums)):
-            rsum=total-lsum-nums[i]
-
-            if lsum==rsum:
+            r_sum = total-l_sum - nums[i]
+            if r_sum == l_sum:
                 return i
-            lsum += nums[i]
+            else:
+                l_sum += nums[i]
         return -1
-
-
+        
         
