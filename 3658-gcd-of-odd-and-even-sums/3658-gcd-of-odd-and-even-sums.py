@@ -1,3 +1,4 @@
+from fractions import gcd
 class Solution(object):
     def gcdOfOddEvenSums(self, n):
         count_odd =0
@@ -7,6 +8,6 @@ class Solution(object):
                 count_even += i
             else:
                 count_odd += i
-        return count_odd - count_even
+        return gcd(count_even,count_odd)
         
         
