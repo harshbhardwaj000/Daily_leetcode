@@ -1,11 +1,11 @@
+from collections import Counter
 class Solution(object):
     def singleNumber(self, nums):
-        result=0
-        for num in nums:
-            result ^=num
-        return result
-            
+        count = Counter(nums)
+        for key ,value in count.items():
+            if value < 2:
+                return key
+        
 
-
-
+        
         
