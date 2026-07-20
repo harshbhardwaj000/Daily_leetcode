@@ -8,6 +8,9 @@ class Solution(object):
                 count_even += i
             else:
                 count_odd += i
-        return gcd(count_even,count_odd)
+        if count_even == 0:
+            return count_odd
+
+        return gcd(count_even,count_odd%count_even)
         
         
