@@ -1,3 +1,13 @@
 class Solution(object):
-    def rotateString(self, s, goal):
-        return len(s) == len(goal) and goal in (s + s)
+    def rotateString(self, s, goal):  
+        if len(s) > len(goal):
+            return False
+        s= s+s
+        if goal in s:
+            return True
+        return False              
+
+             
+
+            
+        
