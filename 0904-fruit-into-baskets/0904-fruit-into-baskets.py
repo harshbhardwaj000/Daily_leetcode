@@ -1,20 +1,15 @@
-import collections
+from collections import defaultdict
 class Solution(object):
     def totalFruit(self, fruits):
-        count = collections.defaultdict(int)
-        l,total,res=0,0,0
-        for r in range(len(fruits)):
-            count[fruits[r]] += 1
-            total += 1
-            while len(count)>2:
-                f= fruits[l]
-                count[f]-=1
-                total-=1
-                l+=1
-                if not count[f]:
-                    count.pop(f)
-            res =max(res,total)
+        i = 0
+        res = 0
+        count = defaultdict(int)
+        for j in range(len(fruits)):
+            count[fruits[j]]+= 1
+            while len(count) > 2:
+                count[fruits[i]]-= 1
+                if count[fruits[i]] == 0:
+                    del count[fruits[i]]
+                i+=1 
+            res = max(res,j-i+1)
         return res
-
-
-        
