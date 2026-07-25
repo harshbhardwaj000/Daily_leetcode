@@ -4,9 +4,8 @@ class Solution(object):
         mul = 0
         for d in str(n):
             res.append(int(d))
-        n= len(res)
         res.sort()
-        mul = res[n-1] * res[n-2]
+        mul = res[-1] * res[-2]
         return mul
         
 
