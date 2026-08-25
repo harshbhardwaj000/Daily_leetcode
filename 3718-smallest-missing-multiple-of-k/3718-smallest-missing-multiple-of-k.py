@@ -1,7 +1,7 @@
 class Solution(object):
     def missingMultiple(self, nums, k):
         num = set(nums)
-        for i in range(1,max(nums)*k+2):
+        for i in range(k,max(nums)*k+2,k):
             if i % k == 0:
                 if i not in num:
                     return i
